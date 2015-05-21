@@ -180,6 +180,7 @@ DEPENDENCIES
   pg
   pry
   rails (= 4.2.1)
+  rake
   react-rails
   rspec-rails (~> 3.1.0)
   sass-rails (~> 5.0)
