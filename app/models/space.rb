@@ -3,6 +3,8 @@ class Space < ActiveRecord::Base
   before_create :assign_slug
   validates_uniqueness_of :slug
 
+  has_one :timeline
+
   private
 
   def assign_slug
