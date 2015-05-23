@@ -9,6 +9,7 @@ var Timeline = React.createClass({
       <div className="timeline">
         <TimelineHeader name={this.state.timeline.name} />
         <TimelinePostList posts={this.state.timeline.posts} />
+        <TimelinePostForm form={this.state.form} onPostSubmit={this.handlePostSubmit} />
       </div>
     )
   }

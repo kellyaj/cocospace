@@ -10,7 +10,10 @@ class SpacesController < ApplicationController
 
     @presenter = {
       :space => space,
-      :timeline => retrieve_timeline(space)
+      :timeline => retrieve_timeline(space),
+      :form => {
+        :action => posts_path
+      }
     }
   end
 
