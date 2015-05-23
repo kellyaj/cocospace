@@ -7,10 +7,12 @@ class SpacesController < ApplicationController
     end
 
     space = Space.find_by_slug(params[:slug])
+    timeline = space.timeline
 
     @presenter = {
       :space => space,
-      :timeline => retrieve_timeline(space),
+      :timeline => timeline,
+      :posts => timeline.posts,
       :form => {
         :action => posts_path
       }
@@ -27,13 +29,4 @@ class SpacesController < ApplicationController
     redirect_to ''
   end
 
-  private
-
-  def retrieve_timeline(space)
-    timeline = space.timeline
-    {
-      :name => timeline.name,
-      :posts => timeline.posts
-    }
-  end
 end
