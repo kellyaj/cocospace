@@ -1,6 +1,5 @@
 var Timeline = React.createClass({
   getInitialState: function() {
-    console.log(this.props.presenter)
     return this.props.presenter
   },
 

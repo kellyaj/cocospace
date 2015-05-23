@@ -12,7 +12,7 @@ var TimelinePostForm = React.createClass({
     var formData = $(this.refs.form.getDOMNode()).serialize();
     this.props.onPostSubmit(formData, this.props.form.action);
 
-    this.refs.author_name.getDOMNode().value = "";
+    this.refs.author_name.getDOMNode().value = authorName;
     this.refs.message.getDOMNode().value = "";
   },
 
