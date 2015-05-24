@@ -24,9 +24,9 @@ class SpacesController < ApplicationController
   end
 
   def create
-    Space.create({:name => params[:name]})
+    space = Space.create({:name => params[:name]})
 
-    redirect_to ''
+    redirect_to "/#{space.slug}"
   end
 
 end
