@@ -20,6 +20,7 @@ gem 'capistrano'
 gem 'capistrano-bundler'
 gem 'capistrano-rails'
 gem 'capistrano-rbenv', github: 'capistrano/rbenv'
+gem 'net-ssh', "~> 2.7.0"
 
 
 group :development, :test do
