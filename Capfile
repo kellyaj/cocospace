@@ -1,7 +1,3 @@
-# Load DSL and set up stages
-#
-require 'capistrano/bundler'
-require 'capistrano/rails'
 require 'capistrano/setup'
 
 set :rbenv_type, :user
@@ -12,6 +8,8 @@ require 'capistrano/rbenv'
 
 # Include default deployment tasks
 require 'capistrano/deploy'
+require 'capistrano/bundler'
+require 'capistrano/rails'
 
 # Include tasks from other gems included in your Gemfile
 #
