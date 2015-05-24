@@ -17,10 +17,12 @@ var Timeline = React.createClass({
 
   render: function() {
     return (
-      <div className="timeline">
-        <TimelineHeader name={this.state.timeline.name} />
-        <TimelinePostList posts={this.state.posts} />
-        <TimelinePostForm form={this.state.form} timelineId={this.state.timeline.id} onPostSubmit={this.handlePostSubmit} />
+      <div className="timeline-container">
+        <div className="timeline">
+          <TimelineHeader name={this.state.timeline.name} />
+          <TimelinePostList posts={this.state.posts} />
+          <TimelinePostForm form={this.state.form} timelineId={this.state.timeline.id} onPostSubmit={this.handlePostSubmit} />
+        </div>
       </div>
     )
   }

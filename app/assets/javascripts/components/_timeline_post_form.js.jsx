@@ -19,10 +19,12 @@ var TimelinePostForm = React.createClass({
   render: function() {
     return (
       <form ref="form" className="post-form" action={this.props.form.action} accept-charset="UTF-8" method="post" onSubmit={this.handleSubmit}>
-        <p><input type="hidden" name="post[timeline_id]" value={this.props.timelineId} /></p>
-        <p><input ref="author_name" name="post[author_name]" placeholder="Your name"  /></p>
-        <p><input ref="message" name="post[message]" placeholder="Enter your message..."  /></p>
-        <p><button type="submit">Post</button></p>
+        <div class="post-form-inputs">
+          <p><button className="btn-blue" type="submit">Post</button></p>
+          <p><input type="hidden" name="post[timeline_id]" value={this.props.timelineId} /></p>
+          <p><input ref="author_name" name="post[author_name]" placeholder="Your name"  /></p>
+          <p><input ref="message" name="post[message]" placeholder="Enter your message..."  /></p>
+        </div>
       </form>
     )
   }

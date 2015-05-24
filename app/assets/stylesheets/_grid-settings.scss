@@ -1,0 +1,55 @@
+@import "bourbon";
+@import "neat";
+@import "neat-helpers";
+
+$column: 90px;
+$gutter: 30px;
+$grid-columns: 10;
+$max-width: 1200px;
+
+$tablet: new-breakpoint(max-width 768px 8);
+$mobile: new-breakpoint(max-width 480px 4);
+
+.timeline-container {
+  @include outer-container(8);
+}
+
+.timeline {
+  background-color: red;
+  @include span-columns(2);
+}
+
+.post {
+  background-color: yellow;
+  @include span-columns(8);
+  margin: 0 1.5em;
+}
+
+.posts-list {
+  margin: 0 3.5em;
+  background-color: green;
+  @include span-columns(6 of 8);
+}
+
+.post-form {
+  margin: 0 3.5em;
+  @include span-columns(6 of 8);
+  button {
+    @include span-columns(2);
+  }
+
+  input {
+    @include span-columns(8 of 8);
+  }
+}
+
+.post-form-inputs {
+  @include span-columns(6 of 8);
+}
+
+.btn-blue {
+  background-color: blue;
+  color: #fff;
+  @include border-left-radius(5px);
+  @include border-right-radius(5px);
+}
