@@ -7,48 +7,126 @@ $gutter: 30px;
 $grid-columns: 10;
 $max-width: 1200px;
 
+$red: #A32500;
+$light: #EFE4BD;
+$medium: #BAB293;
+$dark: #A39770;
+$darkest: #2B2922;
+
 $tablet: new-breakpoint(max-width 768px 8);
 $mobile: new-breakpoint(max-width 480px 4);
 
+body {
+  background-color: $light;
+}
+
 .timeline-container {
-  @include outer-container(8);
+  @include outer-container(10);
 }
 
 .timeline {
-  background-color: red;
+  border: 1px solid $darkest;
+  background-color: $dark;
   @include span-columns(2);
+  @include border-left-radius(5px);
+  @include border-right-radius(5px);
 }
 
-.post {
-  background-color: yellow;
-  @include span-columns(8);
-  margin: 0 1.5em;
+.timeline-header {
+  margin-top: 15px;
+  @include span-columns(10);
+}
+
+.timeline-name {
+  margin: 0 2px;
+  font-family: 'Jura', sans-serif;
+  font-size: 30px;
+  font-weight: bold;
 }
 
 .posts-list {
-  margin: 0 3.5em;
-  background-color: green;
-  @include span-columns(6 of 8);
+  border: 1px solid $light;
+  background-color: $darkest;
+  margin: 15px 45px 0 45px;
+  padding: 10px 0;
+  @include span-columns(8);
+  @include border-left-radius(5px);
+  @include border-right-radius(5px);
 }
 
+.post {
+  background-color: $medium;
+  border: 1px solid $light;
+  color: $darkest;
+  font-size: 15px;
+  font-weight: bold;
+  margin: 5px 30px;
+  @include span-columns(8);
+  @include border-left-radius(5px);
+  @include border-right-radius(5px);
+}
+
+.post-message {
+  font-family: 'Pragati Narrow', sans-serif;
+  margin: 5px 10px;
+}
+
+.post-author {
+  border: 1px solid $darkest;
+  background-color: $dark;
+  margin: 0 10px;
+  padding: 7px;
+  @include border-left-radius(5px);
+  @include border-right-radius(5px);
+}
+
+.post-author, .post-timestamp {
+  display: inline-block;
+  font-family: 'Jura', sans-serif;
+  font-weight: bold;
+}
+
+
 .post-form {
-  margin: 0 3.5em;
-  @include span-columns(6 of 8);
+  margin: 0 45px;
+  margin-bottom: 15px;
+  @include span-columns(8);
   button {
+    height: 60px;
+    font-family: 'Jura', sans-serif;
+    font-weight: bold;
+    font-size: 15px;
+    margin: -30px 0;
+    margin-left: 10px;
     @include span-columns(2);
   }
 
   input {
-    @include span-columns(8 of 8);
+    background-color: $light;
+    border: 1px solid $red;
+    height: 30px;
+    margin: 3px 0;
+    @include span-columns(8);
+    @include border-left-radius(5px);
+    @include border-right-radius(5px);
   }
 }
 
-.post-form-inputs {
-  @include span-columns(6 of 8);
+::-webkit-input-placeholder {
+    color:    $red;
+}
+:-moz-placeholder {
+    color:    $red;
+}
+::-moz-placeholder {
+    color:    $red;
+}
+:-ms-input-placeholder {
+    color:    $red;
 }
 
 .btn-blue {
-  background-color: blue;
+  background-color: $red;
   color: #fff;
   @include border-left-radius(5px);
   @include border-right-radius(5px);

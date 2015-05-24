@@ -10,8 +10,13 @@ var TimelinePost = React.createClass({
     datetime = this.presentDateTime(this.props.createdAt);
     return (
       <div className="post">
-        <p>{this.props.message}</p>
-        <h4>{this.props.authorName}, {datetime}</h4>
+        <p className="post-message">{this.props.message}</p>
+        <h4>
+          <div className="post-signature">
+            <div className="post-author">{this.props.authorName}</div>
+            <div className="post-timestamp">{datetime}</div>
+          </div>
+        </h4>
       </div>
     )
   }
