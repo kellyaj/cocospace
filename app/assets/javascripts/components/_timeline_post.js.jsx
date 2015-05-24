@@ -2,7 +2,7 @@ var TimelinePost = React.createClass({
   presentDateTime: function(rawDate) {
     var rawDate = new Date(rawDate);
     var minutes = ('0' + rawDate.getMinutes()).slice(-2);
-    var date = (rawDate.getMonth() + 1) + "/" + rawDate.getDate() + "/" + rawDate.getFullYear() + " at " + rawDate.getHours() + ":" + minutes
+    var date = rawDate.getHours() + ":" + minutes + " on " + (rawDate.getMonth() + 1) + "/" + rawDate.getDate() + "/" + rawDate.getFullYear()
     return date;
   },
 
