@@ -16,6 +16,11 @@ gem 'react-rails'
 gem 'bourbon'
 gem 'neat'
 
+gem 'capistrano'
+gem 'capistrano-bundler'
+gem 'capistrano-rails'
+gem 'capistrano-rbenv', github: 'capistrano/rbenv'
+
 
 group :development, :test do
   gem 'rspec-rails', '~> 3.1.0'
