@@ -4,7 +4,7 @@ class Timeline < ActiveRecord::Base
   has_many   :posts
 
   before_create :add_name
-  after_save :create_welcome_post
+  after_create :create_welcome_post
 
   private
 
@@ -15,8 +15,8 @@ class Timeline < ActiveRecord::Base
   def create_welcome_post
     Post.create!({
       :timeline_id => self.id,
-      :message => "Write a message and add it to the timeline!",
-      :author_name => "Frankenstein"
+      :message => "Write a message on the timeline!",
+      :author_name => "coco-bot"
     })
   end
 end
