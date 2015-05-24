@@ -1,7 +1,8 @@
 class Space < ActiveRecord::Base
   include Slugs::Generator
 
-  before_create :assign_slug, :generate_timeline
+  before_create :assign_slug
+  after_save :generate_timeline
 
   validates_uniqueness_of :slug
 
