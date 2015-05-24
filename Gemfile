@@ -22,7 +22,6 @@ gem 'capistrano-rails'
 gem 'capistrano-rbenv', github: 'capistrano/rbenv'
 gem 'net-ssh', "~> 2.7.0"
 
-
 group :development, :test do
   gem 'rspec-rails', '~> 3.1.0'
   gem 'pry'
