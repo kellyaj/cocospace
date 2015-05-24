@@ -39,7 +39,8 @@ body {
 }
 
 .timeline-name {
-  color: $gray;
+  text-shadow: -1px 0 $black, 0 1px $red, 1px 0 $black, 0 -1px $red;
+  color: $light;
   margin: 0 2px;
   font-family: 'Jura', sans-serif;
   font-size: 30px;
@@ -78,6 +79,7 @@ body {
   color: $light;
   margin: 0 10px;
   padding: 7px;
+  text-shadow: -1px 0 $black, 0 1px $black, 1px 0 $black, 0 -1px $black;
   @include border-left-radius(5px);
   @include border-right-radius(5px);
 }
@@ -127,9 +129,10 @@ body {
     color:    $red;
 }
 
-.btn-blue {
+.btn-red {
   background-color: $red;
-  color: #fff;
+  color: $light;
+  text-shadow: -1px 0 $black, 0 1px $red, 1px 0 $black, 0 -1px $red;
   @include border-left-radius(5px);
   @include border-right-radius(5px);
 }

@@ -23,7 +23,7 @@ var TimelinePostForm = React.createClass({
           <p><input type="hidden" name="post[timeline_id]" value={this.props.timelineId} /></p>
           <p><input ref="author_name" name="post[author_name]" placeholder="Your name"  /></p>
           <p><input ref="message" name="post[message]" placeholder="Enter your message..."  /></p>
-          <p><button className="btn-blue" type="submit">Post</button></p>
+          <p><button className="btn-red" type="submit">Post</button></p>
         </div>
       </form>
     )
