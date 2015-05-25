@@ -1,5 +1,10 @@
-<%= form_tag('/spaces') do %>
-  <label>Name your space:</label>
-  <%= text_field_tag :name %>
-  <%= button_tag 'Submit' %>
-<% end %>
+<div class="new-space-header">
+  <h1>Create a new space</h1>
+</div>
+<div class="new-space-form">
+  <%= form_tag('/spaces') do %>
+    <label>Space name:</label>
+    <%= text_field_tag :name %>
+    <%= button_tag 'Submit' %>
+  <% end %>
+</div>
