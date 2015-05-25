@@ -21,6 +21,7 @@ gem 'capistrano-bundler'
 gem 'capistrano-rails'
 gem 'capistrano-rbenv', github: 'capistrano/rbenv'
 gem 'net-ssh', "~> 2.7.0"
+gem 'dotenv-rails', :github => "bkeepers/dotenv", :require => 'dotenv/rails-now'
 
 group :development, :test do
   gem 'rspec-rails', '~> 3.1.0'
