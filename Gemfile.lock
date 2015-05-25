@@ -1,4 +1,12 @@
 GIT
+  remote: git://github.com/bkeepers/dotenv.git
+  revision: 0f838e55efeff3ada216b0a31e8d60fe4a97e2be
+  specs:
+    dotenv (2.0.1)
+    dotenv-rails (2.0.1)
+      dotenv (= 2.0.1)
+
+GIT
   remote: git://github.com/capistrano/rbenv.git
   revision: 6f1216cfe0a6b4ac23ca4eaf8acf012e8165d247
   specs:
@@ -214,6 +222,7 @@ DEPENDENCIES
   capistrano-rails
   capistrano-rbenv!
   coffee-rails (~> 4.1.0)
+  dotenv-rails!
   jbuilder (~> 2.0)
   jquery-rails
   neat
