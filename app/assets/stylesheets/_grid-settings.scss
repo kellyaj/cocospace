@@ -14,6 +14,9 @@ $darknavy: #202528;
 $black: #151714;
 $red: #A32500;
 
+$message-font: 'Pragati Narrow', sans-serif;
+$menu-font: 'Jura', sans-serif;
+
 $tablet: new-breakpoint(max-width 768px 8);
 $mobile: new-breakpoint(max-width 480px 4);
 
@@ -41,7 +44,7 @@ body {
 .timeline-name {
   color: $light;
   margin: 0 2px;
-  font-family: 'Jura', sans-serif;
+  font-family: $menu-font;
   font-size: 30px;
   font-weight: bold;
   text-shadow: -1px 0 $black, 0 1px $red, 1px 0 $black, 0 -1px $red;
@@ -71,7 +74,7 @@ body {
 }
 
 .post-message {
-  font-family: 'Pragati Narrow', sans-serif;
+  font-family: $message-font;
   font-size: 20px;
   margin: 5px 10px;
   vertical-align: middle;
@@ -91,7 +94,7 @@ body {
 
 .post-author, .post-timestamp {
   display: inline-block;
-  font-family: 'Jura', sans-serif;
+  font-family: $menu-font;
   font-size: 15px;
   font-weight: bold;
 }
@@ -108,7 +111,7 @@ body {
 
   button {
     height: 60px;
-    font-family: 'Jura', sans-serif;
+    font-family: $menu-font;
     font-weight: bold;
     font-size: 18px;
     margin: -30px 0;
