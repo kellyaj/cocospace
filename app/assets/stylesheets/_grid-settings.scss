@@ -120,14 +120,14 @@ body {
   }
 
   input {
+    @include span-columns(8);
+    @include border-left-radius(5px);
+    @include border-right-radius(5px);
     box-shadow: 0 0 0 1px $black;
     background-color: $gray;
     height: 30px;
     font-size: 15px;
     margin: 3px 0;
-    @include span-columns(8);
-    @include border-left-radius(5px);
-    @include border-right-radius(5px);
   }
 }
 
