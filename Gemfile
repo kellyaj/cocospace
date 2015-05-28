@@ -24,6 +24,7 @@ gem 'net-ssh', "~> 2.7.0"
 gem 'dotenv-rails', :github => "bkeepers/dotenv", :require => 'dotenv/rails-now'
 
 group :development, :test do
+  gem 'jasmine-rails'
   gem 'rspec-rails', '~> 3.1.0'
   gem 'pry'
   gem 'byebug'
