@@ -1,21 +1,28 @@
 var EventList = React.createClass({
+
+  getInitialState: function() {
+    return this.props.presenter;
+  },
+
+  handleEventSubmit: function(formData, url) {
+    $.ajax({
+      data: formData,
+      url: url,
+      type: "POST",
+      dataType: "json",
+      success: function(data) {
+        this.setState({ events: data});
+      }.bind(this)
+    });
+  },
+
   render: function() {
-    var today = new Date();
-    var tomorrow = new Date();
-    tomorrow.setDate(tomorrow.getDate() + 1);
-    var nextWeek = new Date();
-    nextWeek.setDate(nextWeek.getDate() + 8);
-    var nextMonth = new Date();
-    nextMonth.setDate(nextMonth.getDate() + 33);
-    var eventToday = {datetime: today, title: "Coco to groomers", description: "some stuff"}
-    var eventTomorrow = {datetime: tomorrow, title: "Go To Costco", description: "dont forget towel"}
-    var eventNextWeek = {datetime: nextWeek, title: "andrewco interview", description: "front door 11 e jackson"}
-    var eventNextMonth = {datetime: nextMonth, title: "brown bear wash", description: "wash the car"}
+    console.log(this.state.events);
     return (
       <div className="event-list-container">
         <div className="event-list">
           <EventListHeader name={"Events"} />
-          <ChronologicalList events={[eventNextWeek, eventTomorrow, eventNextMonth, eventToday]} />
+          <ChronologicalList events={this.state.events} />
         </div>
       </div>
     )

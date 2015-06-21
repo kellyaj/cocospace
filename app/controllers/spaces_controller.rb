@@ -8,6 +8,7 @@ class SpacesController < ApplicationController
 
     space = Space.find_by_slug(params[:slug])
     timeline = space.timeline
+    events = space.events
 
     @presenter = {
       :space => space,
@@ -16,6 +17,10 @@ class SpacesController < ApplicationController
       :form => {
         :action => posts_path
       }
+    }
+    @events_presenter = {
+      :events => events,
+      :url => events_path
     }
   end
 

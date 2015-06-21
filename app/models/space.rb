@@ -7,6 +7,7 @@ class Space < ActiveRecord::Base
   validates_uniqueness_of :slug
 
   has_one :timeline
+  has_many :events
 
   private
 
