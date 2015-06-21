@@ -16,12 +16,17 @@ var EventList = React.createClass({
     });
   },
 
+  handleAddEvent: function() {
+    React.render(<EventForm />, $('[data-id=new-event]')[0])
+  },
+
   render: function() {
     console.log(this.state.events);
     return (
       <div className="event-list-container">
         <div className="event-list">
-          <EventListHeader name={"Events"} />
+          <EventListHeader name={"Events"} handleAddEvent={this.handleAddEvent} />
+          <div data-id="new-event"></div>
           <ChronologicalList events={this.state.events} />
         </div>
       </div>

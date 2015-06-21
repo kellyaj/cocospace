@@ -24,6 +24,13 @@
   vertical-align: middle;
 }
 
+.add-event-button {
+  background-color: $darkgray;
+  color: $light;
+  float: right;
+  margin: 0 15px 0 0;
+}
+
 .sorted-event-list {
   @include span-columns(10);
   padding: 15px;

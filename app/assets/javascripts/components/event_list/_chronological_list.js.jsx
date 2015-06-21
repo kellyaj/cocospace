@@ -7,7 +7,7 @@ var ChronologicalList = React.createClass({
   render: function() {
     var sortedEvents = this.sortEvents(this.props.events);
     var eventNodes = sortedEvents.map(function(event) {
-      return <Event datetime={event.datetime} title={event.title} description={event.description} />
+      return <Event key={event.id} datetime={event.datetime} title={event.title} description={event.description} />
     });
     return (
       <div className="sorted-event-list">
