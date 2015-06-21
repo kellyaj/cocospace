@@ -1,0 +1,81 @@
+.event-list-container {
+  @include outer-container(10);
+}
+
+.event-list {
+  @include span-columns(4);
+  @include border-left-radius(5px);
+  @include border-right-radius(5px);
+  background-color: $light;
+  border: 1px solid $black;
+}
+
+.event-list-header {
+  @include span-columns(10);
+}
+
+.event-list-name {
+  color: $darknavy;
+  font-family: $menu-font;
+  font-size: 30px;
+  margin-top: 25px;
+  text-align: center;
+  text-shadow: -1px 0 $black, 0 1px $black, 1px 0 $black, 0 -1px $black;
+  vertical-align: middle;
+}
+
+.sorted-event-list {
+  @include span-columns(10);
+  padding: 15px;
+}
+
+.event {
+  @include span-columns(10);
+  color: $darknavy;
+  display: block;
+  margin: 15px 0;
+}
+
+.event-details {
+  @include span-columns(8);
+  @include border-left-radius(5px);
+  @include border-right-radius(5px);
+  border: 1px solid $black;
+}
+
+.event-icon {
+  @include span-columns(2);
+  @include border-left-radius(5px);
+  @include border-right-radius(5px);
+  height: 90px;
+  border: 1px solid $black;
+}
+
+.event-header {
+  @include span-columns(10);
+
+  h3 {
+    font-family: $menu-font;
+    font-size: 20px;
+    text-shadow: -1px 0 $black, 0 1px $black, 1px 0 $black, 0 -1px $black;
+    text-align: center;
+    vertical-align: middle;
+  }
+}
+
+.event-title {
+  @include span-columns(5);
+  display: inline-block;
+}
+
+.event-datetime {
+  @include span-columns(5);
+  display: inline-block;
+}
+
+.event-description {
+  @include span-columns(10);
+  font-family: $message-font;
+  text-align: center;
+  vertical-align: middle;
+}
