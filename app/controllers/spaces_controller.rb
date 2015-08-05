@@ -22,6 +22,8 @@ class SpacesController < ApplicationController
       :events => events,
       :url => events_path
     }
+    @taskline_presenter = {
+    }
   end
 
   def new

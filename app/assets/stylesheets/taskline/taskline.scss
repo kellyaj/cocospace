@@ -1,0 +1,13 @@
+.taskline-calender-container {
+  @include outer-container(10);
+}
+
+.weekday-titles {
+  @include span-columns(10);
+}
+
+.day-title {
+  border: 1px solid $black;
+  text-align: center;
+  @include span-columns(1);
+}
