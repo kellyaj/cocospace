@@ -8,7 +8,6 @@ var PullRequestPresenter = React.createClass({
   },
 
   render: function() {
-    console.log(this.props.pullRequests)
     return (
       <div className="prp-container">
         <PullRequestList pullRequests={this.props.pullRequests} />

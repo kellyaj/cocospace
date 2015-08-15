@@ -3,8 +3,10 @@ module Services
 
     def self.test_prs
       [
-        Services::PullRequests::PresentsPullRequest.for("kellyaj", "cocospace", 1).data,
-        Services::PullRequests::PresentsPullRequest.for("kellyaj", "cocospace", 2).data
+        {title: "first pr!", user: { login: "kellyaj", avatar_url: "https://avatars.githubusercontent.com/u/2367509?v=3"}, created_at: Time.current.to_s},
+        {title: "first pr!", user: { login: "kellyaj", avatar_url: "https://avatars.githubusercontent.com/u/2367509?v=3"}, created_at: Time.current.to_s}
+       # Services::PullRequests::PresentsPullRequest.for("kellyaj", "cocospace", 1).data,
+       # Services::PullRequests::PresentsPullRequest.for("kellyaj", "cocospace", 2).data
       ]
     end
 

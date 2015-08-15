@@ -1,0 +1,19 @@
+.prp-container {
+  @include outer-container(10);
+}
+
+.pr-list-container {
+  @include span-columns(1);
+}
+
+.pr-list-card {
+  background-color: #fff;
+  border: 1px solid $black;
+  text-align: center;
+  @include span-columns(10);
+  img {
+    float: left;
+    height: 100%;
+    width: 100%;
+  }
+}
