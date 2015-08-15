@@ -3,7 +3,8 @@ module Services
 
     def self.test_prs
       [
-        Services::PullRequests::PresentsPullRequest.for("kellyaj", "cocospace", 1).data
+        Services::PullRequests::PresentsPullRequest.for("kellyaj", "cocospace", 1).data,
+        Services::PullRequests::PresentsPullRequest.for("kellyaj", "cocospace", 2).data
       ]
     end
 
