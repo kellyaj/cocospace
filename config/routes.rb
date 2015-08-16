@@ -8,5 +8,7 @@ Rails.application.routes.draw do
   get 'callbacks/fitbit'
   get 'ct' => 'authorizations#fitbit'
   get 'dashboard' => 'dashboard#index', as: "dashboard"
+  resources :tasks
+  resources :task_events
   get '(*slug)' => 'spaces#index'
 end

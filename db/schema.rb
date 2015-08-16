@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150907004301) do
+ActiveRecord::Schema.define(version: 20150810041707) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -86,6 +86,20 @@ ActiveRecord::Schema.define(version: 20150907004301) do
   end
 
   add_index "spaces", ["slug"], name: "index_spaces_on_slug", unique: true, using: :btree
+
+  create_table "task_events", force: :cascade do |t|
+    t.string   "date"
+    t.integer  "task_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "tasks", force: :cascade do |t|
+    t.integer  "space_id"
+    t.string   "name"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
 
   create_table "timelines", force: :cascade do |t|
     t.datetime "created_at", null: false

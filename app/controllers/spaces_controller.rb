@@ -22,7 +22,11 @@ class SpacesController < ApplicationController
       :events => events,
       :url => events_path
     }
+    puts tasks_path
     @taskline_presenter = {
+      :spaceId => space.id,
+      :tasks => [],
+      :taskUrl => tasks_path
     }
   end
 

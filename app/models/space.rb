@@ -8,6 +8,7 @@ class Space < ActiveRecord::Base
 
   has_one :timeline
   has_many :events
+  has_many :tasks
 
   private
 
