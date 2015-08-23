@@ -6,6 +6,6 @@ class CallbacksController < ApplicationController
     session[:refresh_token] = auth_result["refresh_token"]
     session[:user_id]       = auth_result["user_id"]
 
-    # getting tokens, where to go from here?
+    redirect_to dashboard_url
   end
 end
