@@ -16,6 +16,7 @@ gem 'sdoc', '~> 0.4.0', group: :doc
 gem 'react-rails'
 gem 'github_api'
 gem 'light-service'
+gem 'httparty'
 
 gem 'bourbon'
 gem 'neat'
