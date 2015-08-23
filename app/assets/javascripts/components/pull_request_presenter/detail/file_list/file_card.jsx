@@ -14,8 +14,7 @@ var PullRequestFileCard = React.createClass({
   },
 
   presentPatch: function() {
-    var rawPatch = this.props.patch;
-    return this.props.patch;
+    return this.props.patch.replace(/[\n\r\↵]/g, "<br />");
   },
 
   render: function() {
@@ -25,7 +24,7 @@ var PullRequestFileCard = React.createClass({
           {this.props.filename}
         </div>
         <div className="file-card-patch">
-          {this.presentPatch()}
+          <div dangerouslySetInnerHTML={{__html: this.presentPatch()}}></div>
         </div>
       </div>
     )

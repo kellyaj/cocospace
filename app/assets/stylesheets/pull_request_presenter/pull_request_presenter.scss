@@ -27,3 +27,25 @@
     width: 25%;
   }
 }
+
+.pr-file-list-container {
+  @include span-columns(6);
+}
+
+.pr-file-card {
+  margin: 0 0 20px 0;
+  border: 1px solid $black;
+
+  .file-card-header, .file-card-patch {
+    padding: 5px;
+  }
+
+  .file-card-header {
+    background-color: $light;
+    font-family: $header-font;
+  }
+
+  .file-card-patch {
+    background-color: #fff;
+  }
+}
