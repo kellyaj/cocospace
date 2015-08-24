@@ -1,11 +1,11 @@
 module Services::Fitness::Data
-  class RetrievesProfile
+  class RetrievesResource
     extend LightService::Organizer
 
-    def self.for(access_token)
+    def self.for(url, access_token)
       with({
-        :access_token => access_token,
-        :url          => "https://api.fitbit.com/1/user/-/profile.json"
+        :url          => url,
+        :access_token => access_token
       }).reduce(actions)
     end
 
