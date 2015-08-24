@@ -6,6 +6,8 @@ class DashboardController < ApplicationController
       @user = Services::UserService.create_new_user(session[:user_id])
     end
 
+#    Services::Fitness::DataService.update_data_for(@user, session[:access_token])
+
     profile = Services::Fitness::DataService.get_profile_data(session[:access_token])
     lifetime_activities = Services::Fitness::DataService.get_lifetime_activities(session[:access_token])
     todays_activities = Services::Fitness::DataService.todays_activities(session[:access_token])

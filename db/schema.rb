@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150824021453) do
+ActiveRecord::Schema.define(version: 20150824043558) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -31,6 +31,20 @@ ActiveRecord::Schema.define(version: 20150824021453) do
     t.integer  "calories"
     t.datetime "created_at",  null: false
     t.datetime "updated_at",  null: false
+  end
+
+  create_table "log_entries", force: :cascade do |t|
+    t.string   "date"
+    t.float    "distance"
+    t.integer  "user_id"
+    t.integer  "calories"
+    t.integer  "steps"
+    t.integer  "minutes_sedentary"
+    t.integer  "minutes_lightly_active"
+    t.integer  "minutes_fairly_active"
+    t.integer  "minutes_very_active"
+    t.datetime "created_at",             null: false
+    t.datetime "updated_at",             null: false
   end
 
   create_table "posts", force: :cascade do |t|
@@ -83,6 +97,7 @@ ActiveRecord::Schema.define(version: 20150824021453) do
     t.string   "api_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.datetime "last_login"
   end
 
 end

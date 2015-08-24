@@ -1,4 +1,7 @@
 class User < ActiveRecord::Base
+
+  has_many :log_entries
+
   before_create :set_last_login
 
   def set_last_login
