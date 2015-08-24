@@ -1,5 +1,11 @@
 class DashboardController < ApplicationController
   def index
+    @user = current_user
+
+    if @user.nil? && session[:user_id]
+      @user = Services::UserService.create_new_user(session[:user_id])
+    end
+
     profile = Services::Fitness::DataService.get_profile_data(session[:access_token])
     lifetime_activities = Services::Fitness::DataService.get_lifetime_activities(session[:access_token])
     todays_activities = Services::Fitness::DataService.todays_activities(session[:access_token])
