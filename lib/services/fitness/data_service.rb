@@ -2,13 +2,8 @@ module Services
   module Fitness
     class DataService
 
-      def self.creds
-        #::Authorization::AuthorizesUser.for()
-        puts ENV["FITBIT_CLIENT_KEY"]
-        puts ENV["FITBIT_CLIENT_SECRET"]
-        puts ENV["FITBIT_CLIENT_ID"]
-        puts ENV["FITBIT_AUTH_URI"]
-        puts ENV["FITBIT_TOKEN_URI"]
+      def self.get_profile_data(access_token)
+        Services::Fitness::Data::RetrievesProfile.for(access_token).response
       end
 
     end
