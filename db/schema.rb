@@ -72,20 +72,6 @@ ActiveRecord::Schema.define(version: 20150824043558) do
 
   add_index "spaces", ["slug"], name: "index_spaces_on_slug", unique: true, using: :btree
 
-  create_table "task_events", force: :cascade do |t|
-    t.string   "date"
-    t.integer  "task_id"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-  end
-
-  create_table "tasks", force: :cascade do |t|
-    t.integer  "space_id"
-    t.string   "name"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-  end
-
   create_table "timelines", force: :cascade do |t|
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
