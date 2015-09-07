@@ -8,7 +8,6 @@ class LoginReportsController < ApplicationController
     reports.each do |report|
       LoginReport.create(report)
     end
-    # return nothing security reasons
     head :ok
   end
 
