@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150824043558) do
+ActiveRecord::Schema.define(version: 20150907004301) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -45,6 +45,21 @@ ActiveRecord::Schema.define(version: 20150824043558) do
     t.integer  "minutes_very_active"
     t.datetime "created_at",             null: false
     t.datetime "updated_at",             null: false
+  end
+
+  create_table "login_reports", force: :cascade do |t|
+    t.string   "username"
+    t.integer  "timestamp"
+    t.string   "ip"
+    t.string   "time"
+    t.string   "country"
+    t.string   "city"
+    t.string   "lat"
+    t.string   "long"
+    t.string   "hostname"
+    t.string   "org"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
   end
 
   create_table "posts", force: :cascade do |t|

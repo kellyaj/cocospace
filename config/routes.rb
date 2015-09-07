@@ -3,6 +3,7 @@ Rails.application.routes.draw do
   resources :spaces
   resources :posts
   resources :events
+  post 'login_reports' => 'login_reports#create'
   get 'pr' => 'pull_requests#index'
   get 'callbacks/fitbit'
   get 'ct' => 'authorizations#fitbit'
